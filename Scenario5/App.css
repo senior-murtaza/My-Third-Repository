@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f3f6;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+nav {
+  height: 70px;
+  padding: 0 50px;
+  background: #20232a;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 24px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.games-section {
+  width: 1000px;
+  max-width: 90%;
+  margin: 50px auto;
+}
+
+.games-section h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.search {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.game-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.game-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.game-card button {
+  margin-right: 8px;
+}
+
+.delete-button {
+  background: #e74c3c;
+  color: white;
+}
+
+.no-games {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+@media (max-width: 800px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+}
+
