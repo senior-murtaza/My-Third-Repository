@@ -1,0 +1,237 @@
+/* @import "tailwindcss"; */
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"); */
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #182d2b;
+  background: #f7f8f4;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+.page {
+  min-height: 100vh;
+}
+.hero {
+  background: linear-gradient(115deg, #123b36, #1e6558);
+  color: white;
+  padding: 70px 24px 90px;
+}
+.hero-inner,
+.catalog {
+  max-width: 1120px;
+  margin: auto;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #9be5ce;
+}
+.eyebrow.dark {
+  color: #317b69;
+}
+.hero h1,
+h2,
+h3 {
+  font-family: Outfit, Arial, sans-serif;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin: 17px 0;
+}
+.hero p {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #d3e8df;
+  max-width: 570px;
+  margin: 0;
+}
+.catalog {
+  padding: 44px 24px 80px;
+}
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.section-heading h2 {
+  font-size: 2rem;
+  margin: 8px 0 0;
+  letter-spacing: -0.025em;
+}
+.count {
+  color: #4a6961;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  align-items: end;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #e0e9e2;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 32px #1b41360c;
+}
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #385e54;
+}
+.controls input,
+.controls select {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #ceddd4;
+  border-radius: 10px;
+  padding: 0 13px;
+  background: #fff;
+  color: #183b31;
+  outline: none;
+}
+.controls input:focus,
+.controls select:focus {
+  border-color: #21866d;
+  box-shadow: 0 0 0 3px #21866d24;
+}
+.reset,
+.empty button {
+  height: 46px;
+  border: 1px solid #bcd3c6;
+  background: #eaf5ed;
+  color: #1e684f;
+  border-radius: 10px;
+  padding: 0 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.reset:hover,
+.empty button:hover {
+  background: #d8eddf;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e3eae3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px #1b413608;
+}
+.product-art {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  background: linear-gradient(145deg, #e7f2eb, #d5e8de);
+}
+.card:nth-child(3n + 2) .product-art {
+  background: linear-gradient(145deg, #e8eeee, #d7e6e4);
+}
+.card:nth-child(3n) .product-art {
+  background: linear-gradient(145deg, #f3ece1, #e9dfcc);
+}
+.card-body {
+  padding: 17px;
+}
+.category {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #397d65;
+  font-weight: 700;
+}
+.card h3 {
+  font-size: 1.13rem;
+  margin: 8px 0 14px;
+}
+.card strong {
+  font-size: 1.15rem;
+  color: #173e32;
+}
+.empty {
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #b8d2c1;
+  border-radius: 18px;
+  padding: 58px 20px;
+}
+.empty span {
+  font-size: 3rem;
+  color: #568b73;
+}
+.empty h3 {
+  font-size: 1.5rem;
+  margin: 4px 0;
+}
+.empty p {
+  color: #61776c;
+}
+.empty button {
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .hero {
+    padding: 54px 20px 70px;
+  }
+  .catalog {
+    padding: 34px 20px 60px;
+  }
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+  .controls {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .product-art {
+    height: 115px;
+    font-size: 3rem;
+  }
+  .card-body {
+    padding: 13px;
+  }
+  .card h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 380px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
